@@ -25,6 +25,17 @@ class Strategy {
             }
         }
     }
+    
+    bool isLocalMinimum() {
+        bool is_minimum = data[data.size() - 2].price < data[data.size() - 3].price &&
+                          data[data.size() - 2].price < data.back().price;
+
+        std::cout << "Checking for local minimum at " << data[data.size() - 2].price
+                  << " (previos: " << data[data.size() - 3].price
+                  << ", next: " << data.back().price
+                  << ") - is minimum: " << is_minimum << std::endl;
+        return is_minimum;
+    }
 
 };
 
