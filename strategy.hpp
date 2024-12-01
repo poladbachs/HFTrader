@@ -51,7 +51,12 @@ class Strategy {
             if (current_price <= entry_price - stop_loss) {
                 std::cout << "Stop loss triggered at price: " << current_price << std::endl;
                 in_trade = false;
+            } else if (current_price >= entry_price + stop_win) {
+                std::cout << "Take Profit triggered at price: " << current_price << std::endl;
+                in_trade = false;
             }
+        }
+        
     }
 
 };
