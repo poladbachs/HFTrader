@@ -37,6 +37,17 @@ class Strategy {
         return is_minimum;
     }
 
+    void execute() {
+        std::cout << "Executing strategy..." << std::endl;
+        if (!in_trade) {
+            if (isLocalMinimum()) {
+                entry_price = data[data.size() - 2].price;
+                in_trade = true;
+                std::cout << "Buy signal generated at price: " << entry_price << std::endl;
+            }
+        }
+    }
+
 };
 
 #endif
