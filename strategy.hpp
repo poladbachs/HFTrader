@@ -56,7 +56,9 @@ class Strategy {
                 in_trade = false;
             }
         }
-        
+        if (data.size() > 3) {
+            data.erase(data.begin());
+        }
     }
 
 };
