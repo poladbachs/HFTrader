@@ -45,7 +45,13 @@ class Strategy {
                 in_trade = true;
                 std::cout << "Buy signal generated at price: " << entry_price << std::endl;
             }
-        }
+        } else {
+            double current_price = data.back().price;
+            std::cout << "Current price: " << current_price << ", Entry price: " << entry_price << std::endl;
+            if (current_price <= entry_price - stop_loss) {
+                std::cout << "Stop loss triggered at price: " << current_price << std::endl;
+                in_trade = false;
+            }
     }
 
 };
