@@ -41,3 +41,16 @@ void Strategy::execute() {
         data.erase(data.begin());
     }
 }
+
+// Check if the second-to-last data point is a local minimum
+bool Strategy::isLocalMinimum() {
+    bool is_minimum = data[data.size() - 2].price < data[data.size() - 3].price &&
+                      data[data.size() - 2].price < data.back().price;
+
+    std::cout << "Checking for local minimum at " << data[data.size() - 2].price
+              << " (previous: " << data[data.size() - 3].price
+              << ", next: " << data.back().price
+              << ") - is minimum: " << is_minimum << std::endl;
+
+    return is_minimum;
+}
