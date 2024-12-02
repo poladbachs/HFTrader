@@ -28,7 +28,7 @@ void TradingSystem::fetchMarketData() {
         res = curl_easy_perform(curl);
         curl_easy_cleanup(curl);
 
-        if (res = CURLE_OK) {
+        if (res == CURLE_OK) {
             Json::Value jsonData;
             Json::Reader jsonReader;
             if (jsonReader.parse(readBuffer, jsonData)) {
