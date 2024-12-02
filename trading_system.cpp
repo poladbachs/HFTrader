@@ -27,5 +27,13 @@ void TradingSystem::fetchMarketData() {
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
         res = curl_easy_perform(curl);
         curl_easy_cleanup(curl);
+
+        if (res = CURLE_OK) {
+            Json::Value jsonData;
+            Json::Reader jsonReader;
+            if (jsonReader.parse(readBuffer, jsonData)) {
+                std::string priceStr = jsonData["Realtime Currency Exchange Rate"]["5. Exchange Rate"].asString();
+            }
+        }
     }
 }
