@@ -33,6 +33,12 @@ void TradingSystem::fetchMarketData() {
             Json::Reader jsonReader;
             if (jsonReader.parse(readBuffer, jsonData)) {
                 std::string priceStr = jsonData["Realtime Currency Exchange Rate"]["5. Exchange Rate"].asString();
+                double price = std::stod(priceStr);
+                std::cout << "Fetched EUR/USD price: " << price << std::endl;
+                MarketData md("EUR/USD", price);
+                strategy.onMarketData(md);
+            } else {
+                std::cerr << "Failed to fetch market data: " << curl_easy_strerror(res) << std::endl;
             }
         }
     }
