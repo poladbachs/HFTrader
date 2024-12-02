@@ -7,3 +7,10 @@
 
 TradingSystem::TradingSystem(double stop_loss, double stop_win)
     : strategy(stop_loss, stop_win) {}
+
+void TradingSystem::run() {
+    for (int i = 0; i < 100; ++i) {
+        fetchMarketData();
+        std::this_thread::sleep_for(std::chrono::seconds(60));
+    }
+}
