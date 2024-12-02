@@ -1,5 +1,5 @@
-#ifndef MARKET_DATA.HPP
-#define MARKET_DATA.HPP
+#ifndef MARKET_DATA_HPP
+#define MARKET_DATA_HPP
 
 #include <string>
 
