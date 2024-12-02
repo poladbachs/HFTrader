@@ -14,3 +14,14 @@ void TradingSystem::run() {
         std::this_thread::sleep_for(std::chrono::seconds(60));
     }
 }
+
+void TradingSystem::fetchMarketData() {
+    CURL* curl;
+    CURLcode res;
+    std::string readBuffer;
+
+    curl = curl_easy_init();
+    if (curl) {
+        
+    }
+}
