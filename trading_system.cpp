@@ -22,6 +22,7 @@ void TradingSystem::fetchMarketData() {
 
     curl = curl_easy_init();
     if (curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=EUR&to_currency=USD&apikey=U6L3NVT5G6QZR485");
         
     }
 }
