@@ -2,7 +2,7 @@
 ![alber_gif](https://github.com/user-attachments/assets/b35c447a-7403-4df3-bb00-7ad876348e1c)
 
 
-HFT Trader is a high-frequency trading (HFT) system implemented in C++ to analyze and trade on financial market data. The system implements basic strategies, collects market data using the Alpha Vantage API, and executes trades. This project aims to simulate a basic automated trading system with performance benchmarking.
+HFT Trader is a high-frequency trading (HFT) system implemented in C++ to analyze and trade on financial market data, specifically forex EUR/USD. The system implements basic strategies, collects market data using the Alpha Vantage API, and executes trades. This project aims to simulate a basic automated trading system with performance benchmarking.
 
 ## Tech Stack
 
