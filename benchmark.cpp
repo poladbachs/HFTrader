@@ -10,3 +10,6 @@ static void BM_Execute(benchmark::State& state) {
         strategy.execute();
     }
 }
+BENCHMARK(BM_Execute);
+
+BENCHMARK_MAIN();
